@@ -1,0 +1,23 @@
+{
+  "name": "weekly",
+  "version": "1.0.0",
+  "description": "Autor: Leander Weiss\r Beschreibung: /\r Datum: 04.04.2024 - noch in Arbeit\r Version: 1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "devStart": "nodemon server.js",
+    "build": "webpack"
+  },
+  "author": "Leander Weiss",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7",
+    "webpack": "^5.91.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5",
+    "nodemon": "^3.1.0"
+  }
+}

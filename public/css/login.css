@@ -1,0 +1,88 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 50;
+}
+
+body {
+    margin: 0%;
+    background: url(../img/Cooler\ Hintergrund.jpg);
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+#main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 25vh 1fr auto;
+    grid-template-areas:
+    ". . ."
+    ". login ."
+    ". . .";
+}
+
+#header {
+    grid-area: header;
+    place-self: center center;
+    color: white;
+    font-size: 35px;
+}
+
+#loginbox {
+    grid-area: login;
+    place-self: stretch;
+    backdrop-filter: blur(15px); 
+    border-radius: 10px;
+    border: 1px solid white;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 60px 60px 60px 60px;
+    grid-template-areas:
+    "title"
+    "username"
+    "password"
+    "submit"
+    "msg";
+    place-self: center center;
+}
+
+#title {
+    grid-area: title;
+    place-self: center center;
+    font-size: 30px;
+    color: white;
+}
+
+#username {
+    grid-area: username;
+    place-self: center center;
+    scale: 1.5;
+    border-radius: 5px;
+    border: none;
+}
+
+#password {
+    grid-area: password;
+    place-self: center center;
+    scale: 1.5;
+    border-radius: 5px;
+    border: none;
+}
+
+#submit {
+    grid-area: submit;
+    place-self: center center;
+    scale: 1.5;
+    width: 190px;
+    height: auto;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#login_msg {
+    grid-area: msg;
+    place-self: center center;
+    color: red;
+    font-size: 25px;
+    visibility: hidden;
+}

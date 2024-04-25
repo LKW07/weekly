@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/login.css">
+    <!--<script type="module" src="/public/js/login.js" defer></script>-->
+    <title>Login</title>
+</head>
+<body>
+    <!--Login Seite-->
+
+    <div id="main">
+        <form action="/login" id="loginbox" method="post">
+            <h2 id="title">Login</h2>
+            <input type="text" name="username" id="username" placeholder="Username"/>
+            <input type="password" name="password" id="password" placeholder="Passwort"/>
+            <input type="submit" name="submit" value="Anmelden" id="submit"/>
+            <p id="login_msg">WRONG USERNAME OR PASSWORD</p>
+        </form>
+    </div>
+</body>
+</html>
