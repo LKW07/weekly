@@ -1,0 +1,23 @@
+body {
+    display: grid;
+    grid-template-rows: 200px 400px 200px;
+    grid-template-areas:
+    ". . ."
+    ". h ."
+    ". . .";
+}
+
+#header {
+    grid-area: h;
+    place-self: center center;
+    font-size: 100px;
+    font-weight: bolder;
+}
+
+#main {
+    grid-area: h;
+    place-self: end center;
+    margin-bottom: 100px;
+    font-size: 20px;
+    font-weight: bolder;
+}

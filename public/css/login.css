@@ -34,12 +34,13 @@ body {
     border-radius: 10px;
     border: 1px solid white;
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 60px 60px 60px 60px;
+    grid-template-columns: 400px;
+    grid-template-rows: 60px 60px 60px 60px 60px;
     grid-template-areas:
     "title"
     "username"
     "password"
+    "links"
     "submit"
     "msg";
     place-self: center center;
@@ -52,20 +53,70 @@ body {
     color: white;
 }
 
-#username {
+#userbox {
     grid-area: username;
+    position: relative;
     place-self: center center;
-    scale: 1.5;
-    border-radius: 5px;
-    border: none;
 }
 
-#password {
-    grid-area: password;
-    place-self: center center;
-    scale: 1.5;
-    border-radius: 5px;
+#loginbox .input {
+    border-radius: 0px;
     border: none;
+    border-bottom: 2px solid white;
+    font-weight: 500;
+    outline: 0px;
+    background: transparent;
+    color: #fff;
+    padding: 25px 10px 7.5px;
+    font-size: 1em;
+}
+
+#userbox > i,
+#passbox > i {
+    position: absolute;
+    left: 0;
+    padding: 15px 10px;
+    font-style: normal;
+    transition: 0.5s;
+    pointer-events: none;
+    color: lightgrey;
+}
+
+#loginbox .input:focus ~ i,
+#loginbox .input:valid ~ i {
+    color: white;
+    transform: translateY(-10px);
+    font-size: 0.8em;
+}
+
+#passbox {
+    grid-area: password;
+    position: relative;
+    place-self: center center;
+}
+
+#links {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-areas:
+    "f . s";
+    grid-area: links;
+    place-self: center center;
+}
+
+#links > a {
+    text-decoration: none;
+    color: white;
+}
+
+#links #forgot_password {
+    grid-area: f;
+    place-self: center center;
+}
+
+#links #sign_up {
+    grid-area: s;
+    place-self: center center;
 }
 
 #submit {
